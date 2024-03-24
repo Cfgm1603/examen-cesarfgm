@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    #ffffff,
+    rgb(212, 240, 212),
+    rgba(236, 179, 179, 0.786),
+    rgb(196, 230, 234)
+  );
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 10s infinite linear alternate;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0 100px 0 100px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style: none;
+  padding: 0;
+}
+.around_nav {
+  border-radius: 100px;
+  overflow: hidden; /* Oculta el contenido que sobresale del óvalo */
+  background-color: #c06060; /* Color de fondo del contenedor */
+  min-width: 50%;
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+.title {
+  order: 0;
+  font-size: 2.5vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.text {
+  order: 2;
+}
+.image_container {
+  display: flex;
+  justify-content: right;
+}
+.image {
+  order: 1;
+  width: 60%;
+  height: auto;
+}
+
+.btn_nav {
+  min-width: 120px;
+  max-width: 30px;
+  min-height: 55px;
+  max-height: 50px;
+  border-radius: 100px;
+  background-color: #9a70b8;
+  display: flex; /* Utiliza flexbox para centrar verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center;
+  margin: 0 9px;
+}
+.text_btn {
+  all: unset;
+  text-decoration: none;
   color: white;
+  font-size: 1.5em;
+}
+a {
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Raleway";
+  src: url(../public/Raleway-VariableFont_wght.ttf);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Raleway-bold {
+  font-family: Raleway;
+  font-weight: bold;
+}
+
+.Raleway {
+  font-family: Raleway;
+}
+
+/* Para moviles */
+@media screen and (max-width: 950px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .image_container {
+    display: flex;
+    justify-content: center;
+  }
+  .image {
+    order: 1;
+    width: 75%;
+    height: auto;
   }
 }
