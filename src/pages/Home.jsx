@@ -14,7 +14,7 @@ const Home = () => {
           <div className="image_container">
             <img
               className="image"
-              src={require("./memoji.png")}
+              src={require("../assets/memoji.png")}
               alt="Memoji mio"
             />
           </div>
