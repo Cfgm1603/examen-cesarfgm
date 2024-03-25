@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as Scroll } from "react-scroll";
 
 function Navbar() {
   return (
@@ -7,14 +8,28 @@ function Navbar() {
       <div class="around_nav">
         <ul className="Raleway-bold">
           <div class="btn_nav">
-            <Link to={"/"}>
-              <a class="text_btn">Home</a>
-            </Link>
+            <Scroll
+              to="Home"
+              spy={true}
+              smooth={true}
+              offset={1}
+              duration={500}
+            >
+              <Link to={"/"}>
+                <a class="text_btn">Home</a>
+              </Link>
+            </Scroll>
           </div>
           <div class="btn_nav">
-            <Link to={"/Home"}>
+            <Scroll
+              to="proyectos"
+              spy={true}
+              smooth={true}
+              offset={5}
+              duration={500}
+            >
               <a class="text_btn">Proyectos</a>
-            </Link>
+            </Scroll>
           </div>
           <div class="btn_nav">
             <Link to={"/Home"}>
