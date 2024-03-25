@@ -1,39 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Link as Scroll } from "react-scroll";
+import { scroller } from "react-scroll";
 
 function Navbar() {
+  const handleScrollToProyectos = () => {
+    const { pathname } = window.location;
+    console.log(pathname);
+    if (pathname === "/") {
+      // Si estamos en la página de inicio, hacemos scroll
+      scroller.scrollTo("proyectos", {
+        spy: true,
+        smooth: true,
+        offset: 5,
+        duration: 500,
+      });
+    } else {
+      // Si no estamos en la página de inicio, redirigimos a '/'
+      window.location.href = "/";
+
+      scroller.scrollTo("proyectos", {
+        spy: true,
+        smooth: true,
+        offset: 5,
+        duration: 500,
+      });
+    }
+  };
+
   return (
     <nav>
-      <div class="around_nav">
-        <ul className="Raleway-bold">
-          <div class="btn_nav">
-            <Scroll
-              to="Home"
-              spy={false}
-              smooth={true}
-              offset={5}
-              duration={500}
-            >
-              <Link to={"/"}>
-                <a class="text_btn">Home</a>
-              </Link>
-            </Scroll>
-          </div>
-          <div class="btn_nav">
-            <Scroll
-              to="proyectos"
-              spy={true}
-              smooth={true}
-              offset={5}
-              duration={500}
-            >
-              <a class="text_btn">Proyectos</a>
-            </Scroll>
-          </div>
-          <div class="btn_nav">
+      <div className="around_nav Raleway-bold">
+        <ul>
+          <Link to={"/"}>
+            <a href="/">
+              {/* <Scroll to="Home" smooth={true} offset={5} duration={500}> */}
+              <div className="btn_nav">
+                <a href="/" className="text_btn">
+                  Home
+                </a>
+              </div>
+              {/* </Scroll> */}
+            </a>
+          </Link>
+
+          <a href="#" onClick={handleScrollToProyectos} className="text_btn">
+            <div className="btn_nav">Proyectos</div>
+          </a>
+
+          <div className="btn_nav">
             <Link to={"/acerca"}>
-              <a class="text_btn">Acerca</a>
+              <a className="text_btn">Acerca</a>
             </Link>
           </div>
         </ul>

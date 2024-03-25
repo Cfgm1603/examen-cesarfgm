@@ -49,9 +49,10 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
+
 .around_nav {
   border-radius: 100px;
   background: linear-gradient(
@@ -182,7 +183,9 @@ a {
 /* PAGINA 2 */
 .about {
   width: 100%;
-  margin-top: 100%;
+}
+.fill {
+  height: 300vw;
 }
 
 @font-face {
@@ -262,5 +265,9 @@ a {
   .txt_proyect p {
     font-size: 3vw;
     margin: 3vw 1.4vw 3vw 1.4vw;
+  }
+  .phone {
+    max-width: 50vw;
+    rotate: 14deg;
   }
 }
