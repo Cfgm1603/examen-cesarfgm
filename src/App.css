@@ -67,6 +67,7 @@ nav ul {
   position: fixed;
   left: 50%;
   margin-left: -27.5%;
+  z-index: 1;
 }
 
 .title {
@@ -146,24 +147,11 @@ a {
   order: 0;
 }
 .phone {
-  max-width: 50vw;
-  rotate: 20deg;
+  min-width: 24vw;
+  rotate: 14deg;
 }
-.animate_phone {
-  animation: phone_animation 1s ease-out 0s 1 forwards;
-  rotate: 20deg;
-}
-
-@keyframes phone_animation {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(10%);
-  }
-  100% {
-    transform: t ranslateX(0%);
-  }
+.animation_phone {
+  margin-top: 10vw;
 }
 .txt_proyect {
   color: #ffffff;
@@ -182,8 +170,19 @@ a {
   width: 80%;
   order: 1;
 }
+
+.txt_proyect h1 {
+  font-size: 2.5vw;
+}
 .txt_proyect p {
-  font-size: 1.6vw;
+  font-size: 1.4vw;
+  margin: 3vw 1.4vw 3vw 1.4vw;
+}
+
+/* PAGINA 2 */
+.about {
+  width: 100%;
+  margin-top: 100%;
 }
 
 @font-face {
@@ -249,5 +248,19 @@ a {
   }
   .Proyectos {
     margin-top: 10vw;
+  }
+  .txt_proyect {
+    margin-top: 4vw;
+    margin-right: 0vw;
+    width: 85%;
+    max-height: 43vw;
+    margin-bottom: 3vw;
+  }
+  .txt_proyect h1 {
+    font-size: 4vw;
+  }
+  .txt_proyect p {
+    font-size: 3vw;
+    margin: 3vw 1.4vw 3vw 1.4vw;
   }
 }

@@ -10,9 +10,9 @@ function Navbar() {
           <div class="btn_nav">
             <Scroll
               to="Home"
-              spy={true}
+              spy={false}
               smooth={true}
-              offset={1}
+              offset={5}
               duration={500}
             >
               <Link to={"/"}>
@@ -32,7 +32,7 @@ function Navbar() {
             </Scroll>
           </div>
           <div class="btn_nav">
-            <Link to={"/Home"}>
+            <Link to={"/acerca"}>
               <a class="text_btn">Acerca</a>
             </Link>
           </div>
