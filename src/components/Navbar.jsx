@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 function Navbar() {
+  const location = useLocation();
   const handleScrollToProyectos = () => {
     const { pathname } = window.location;
+
     console.log(pathname);
     if (pathname === "/") {
       // Si estamos en la página de inicio, hacemos scroll

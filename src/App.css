@@ -22,6 +22,9 @@
     background-position: right;
   }
 }
+#Home {
+  display: flex;
+}
 
 .content {
   display: flex;
@@ -29,12 +32,19 @@
   justify-content: center;
   align-items: center;
 }
+.wholeContent {
+  display: flex;
+}
+.Welcome {
+  flex: 1;
+}
 .container {
   display: flex;
   flex-direction: column;
   padding: 0 100px 0 100px;
   padding-top: 10%;
-  height: 100vh;
+  max-height: fit-content;
+  margin-bottom: 8vw;
 }
 
 .content-wrapper {
@@ -99,7 +109,7 @@ nav ul {
   min-height: 55px;
   max-height: 50px;
   border-radius: 100px;
-  background-color: #000000;
+  background-color: rgba(195, 195, 195, 0);
   display: flex; /* Utiliza flexbox para centrar verticalmente el contenido */
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center;
@@ -110,7 +120,7 @@ nav ul {
 .text_btn {
   all: unset;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 1.5em;
 }
 a {
@@ -139,22 +149,21 @@ a {
 }
 
 .Proyectos {
+  margin: 4vw;
   width: 100%;
-  margin-top: 6vw;
   align-items: center;
+  flex: 1;
 }
 
 .img_phone {
   width: 100%;
-  order: 0;
 }
 .phone {
-  min-width: 24vw;
+  margin-top: 8vw;
+  max-height: 40vw;
   rotate: 14deg;
 }
-.animation_phone {
-  margin-top: 10vw;
-}
+
 .txt_proyect {
   color: #ffffff;
   text-align: center;
@@ -187,9 +196,10 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 100px 0 100px;
+
   margin-top: 16vw;
   height: 100vh;
+  flex: 1;
 }
 .myphoto {
   width: 45vw;
@@ -224,10 +234,10 @@ a {
   padding: 3vw;
   min-width: 80vw;
   min-height: 20vw;
-  position: absolute;
+  position: relative;
   border-radius: 20px;
-  left: 6vw;
-  right: 6vw;
+  left: 0vw;
+  right: 0vw;
 }
 .container_form h2 {
   text-align: center;
@@ -261,6 +271,10 @@ a {
   margin: 0;
   max-width: fit-content;
   max-height: fit-content;
+}
+.all {
+  display: flex;
+  flex-direction: column;
 }
 textarea,
 input {
@@ -306,6 +320,9 @@ input:focus {
 
 /* Para moviles */
 @media screen and (max-width: 950px) {
+  .content {
+    min-height: fit-content;
+  }
   .title {
     font-size: 5vw;
     text-align: center;
@@ -324,7 +341,7 @@ input:focus {
     flex-direction: column;
     padding: 0 20px 0 20px;
     padding-top: 20vw;
-    height: 100vh;
+    max-height: fit-content;
   }
   .content-wrapper {
     display: flex;
@@ -353,7 +370,7 @@ input:focus {
     font-size: 3vw;
   }
   .Proyectos {
-    margin-top: 10vw;
+    max-height: 90vw;
   }
   .txt_proyect {
     margin-top: 4vw;
@@ -370,12 +387,27 @@ input:focus {
     margin: 3vw 1.4vw 3vw 1.4vw;
   }
   .phone {
-    max-width: 50vw;
+    padding-top: 20vw;
+    max-height: 60vw;
     rotate: 14deg;
   }
   .label_text {
     font-size: 3.3vw;
   }
+  .aboutme {
+    height: 0;
+    margin-top: -70vw;
+    max-height: 80%;
+    flex: 1;
+  }
+  .container_form {
+    background-color: #ffffff;
+    left: 1vw;
+    right: 0vw;
+    width: 90%; /* En lugar de min-width */
+    min-height: 40vw; /* Puedes usar un valor fijo o relativo según sea necesario */
+  }
+
   .container_form h2 {
     font-size: 5vw;
   }
@@ -390,5 +422,23 @@ input:focus {
   .btn {
     font-size: 3vw;
     cursor: pointer;
+  }
+  .myphoto {
+    margin-top: 100vw;
+    width: 80vw;
+  }
+  .namer {
+    width: 80vw;
+    font-size: 5vw;
+  }
+  .bio {
+    margin-top: 2vw;
+    margin-bottom: 0;
+    width: 80vw;
+    font-size: 4vw;
+    max-height: 200vw;
+  }
+  .filler {
+    height: 20vw;
   }
 }
