@@ -12,7 +12,7 @@
 .body {
   background-image: var(--gradient);
   background-size: 400%;
-  animation: bg-animation 10s infinite linear alternate;
+  animation: bg-animation 6s infinite linear alternate;
 }
 @keyframes bg-animation {
   0% {
@@ -182,6 +182,32 @@ a {
 }
 
 /* PAGINA 2 */
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px 0 100px;
+  margin-top: 16vw;
+  height: 100vh;
+}
+.myphoto {
+  width: 45vw;
+}
+.namer {
+  text-align: center;
+  background-color: darkolivegreen;
+  width: 45vw;
+  color: aliceblue;
+}
+
+.bio {
+  margin-top: 2vw;
+  width: 50vw;
+  font-size: 1.5vw;
+  text-align: justify;
+}
+
 .container Raleway {
   padding: 0;
 }

@@ -8,9 +8,11 @@ const Home = () => {
       <Navbar />
       <div className="container Raleway">
         <div className="content-wrapper">
-          <div className="title">
-            <h1>Hola Páramo! Soy César</h1>
-          </div>
+          <AnimatedOnScroll animationIn="headShake" animationInDuration="2000">
+            <div className="title">
+              <h1>Hola Páramo! Soy César</h1>
+            </div>
+          </AnimatedOnScroll>
           <div className="image_container">
             <img
               className="image"
@@ -49,9 +51,6 @@ const Home = () => {
             <br />
             Esta propuesta se encuentra actualmente en desarrollo.
           </p>
-          {/* <Link to="/Proyectos">
-            <button className="btn">Ver Proyectos</button>
-          </Link> */}
         </div>
       </div>
     </div>

@@ -1,18 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { useState } from "react";
 
 const About = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    topic: "",
-    contactNumber: "",
-    message: "",
-  });
   const handleSubmit = (e) => {
     const nameField = document.getElementById("name");
-
     const emailField = document.getElementById("email");
     const topicField = document.getElementById("topic");
     const contactNumber = document.getElementById("contactNumber");
@@ -30,10 +21,42 @@ const About = () => {
   return (
     <div>
       <Navbar />
+      <div className="aboutme">
+        <img
+          className="myphoto"
+          src={require("../assets/my_photo.png")}
+          alt="César Giralod"
+        ></img>
+        <div className="namer">
+          <h1>César Felipe Giraldo Mora</h1>
+        </div>
+        <div className="bio">
+          <i>
+            Soy un estudiante de séptimo semestre de Ingeniería Informática, y
+            me apasiona el desarrollo web. Tengo sólidas habilidades en
+            tecnologías como React, JavaScript, HTML y CSS. Además, tengo
+            experiencia trabajando con Python y Java, y he utilizado SpringBoot
+            en proyectos de backend.
+            <br></br> <br></br>
+            Actualmente, formo parte del equipo de la célula de Innovación,
+            Investigación, Transferencia & Emprendimiento de la Universidad de
+            la Sabana, desempeñándome como diseñador UI/UX en AVI. Esta
+            experiencia me ha permitido aplicar mis conocimientos en un entorno
+            profesional, donde puedo contribuir con soluciones creativas y
+            funcionales.
+            <br></br>
+            <br></br>
+            Me considero una persona proactiva, responsable y con una fuerte
+            motivación para seguir aprendiendo y creciendo profesionalmente. Me
+            emociona enfrentar nuevos desafíos y buscar constantemente
+            oportunidades para mejorar mis habilidades y conocimientos.
+          </i>
+        </div>
+      </div>
       <div className="container Raleway">
         <div class="container_form">
-          <h2>!Contactame!</h2>
-          <p>Escribeme tus comentarios o preguntas</p>
+          <h2>¡Contáctame!</h2>
+          <p>Escríbeme tus comentarios o preguntas </p>
           <form>
             <div className="row">
               <div class="column">
