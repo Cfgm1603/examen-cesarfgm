@@ -10,7 +10,7 @@ const Home = () => {
 
         <div className="Welcome container Raleway">
           <div className="content-wrapper">
-            <AnimatedOnScroll animationIn="headShake" animationInDuration="000">
+            <AnimatedOnScroll animationIn="headShake">
               <div className="title">
                 <h1>Hola Páramo! Soy César</h1>
               </div>
