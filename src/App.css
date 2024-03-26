@@ -34,6 +34,7 @@
   flex-direction: column;
   padding: 0 100px 0 100px;
   padding-top: 10%;
+  height: 100vh;
 }
 
 .content-wrapper {
@@ -181,11 +182,86 @@ a {
 }
 
 /* PAGINA 2 */
+.container Raleway {
+  padding: 0;
+}
 .about {
   width: 100%;
 }
 .fill {
   height: 300vw;
+}
+
+.container_form {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 3vw;
+  min-width: 80vw;
+  min-height: 20vw;
+  position: absolute;
+  border-radius: 20px;
+  left: 6vw;
+  right: 6vw;
+}
+.container_form h2 {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.container_form p {
+  text-align: center;
+  color: #959595;
+  font-size: 1.3vw;
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  margin: 30px auto 0 auto;
+  /* ATENTO ACA PROBLEMA */
+}
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px 30px;
+  margin-bottom: 20px;
+}
+.label_text {
+  font-size: 1.2vw;
+}
+.label_text_area {
+  padding: 0;
+  margin: 0;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+textarea,
+input {
+  width: 90%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 1vw;
+}
+textarea {
+  resize: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.btn {
+  padding: 15px 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: cadetblue;
+  color: #ffffff;
+  font-size: 1.2vw;
+  cursor: pointer;
 }
 
 @font-face {
@@ -222,6 +298,7 @@ a {
     flex-direction: column;
     padding: 0 20px 0 20px;
     padding-top: 20vw;
+    height: 100vh;
   }
   .content-wrapper {
     display: flex;
@@ -269,5 +346,23 @@ a {
   .phone {
     max-width: 50vw;
     rotate: 14deg;
+  }
+  .label_text {
+    font-size: 3.3vw;
+  }
+  .container_form h2 {
+    font-size: 5vw;
+  }
+
+  .container_form p {
+    font-size: 3vw;
+  }
+  textarea,
+  input {
+    font-size: 3vw;
+  }
+  .btn {
+    font-size: 3vw;
+    cursor: pointer;
   }
 }
